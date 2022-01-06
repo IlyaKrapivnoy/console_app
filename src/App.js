@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Console from './components/Console';
 import Flex from './components/Flex';
 import Title from './components/Title';
 
@@ -15,6 +16,7 @@ function App() {
             <Flex justify='center'>
                 <Title color={'green'}>Test</Title>
             </Flex>
+            <Console />
         </AppWrapper>
     );
 }
