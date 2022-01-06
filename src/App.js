@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Button from './components/Button';
 import Console from './components/Console';
 import Flex from './components/Flex';
 import Title from './components/Title';
@@ -17,6 +18,7 @@ function App() {
                 <Title color={'green'}>Test</Title>
             </Flex>
             <Console />
+            <Button>Send</Button>
         </AppWrapper>
     );
 }
