@@ -26,8 +26,16 @@ const StyledButton = styled.button`
     }
 `;
 
+const LargeButton = styled(StyledButton)`
+    font-size: 32px;
+`;
+
+const SmallButton = styled(StyledButton)`
+    font-size: 16px;
+`;
+
 const Button = (props) => {
-    return <StyledButton {...props} />;
+    return <SmallButton {...props} />;
 };
 
 export default Button;
