@@ -14,6 +14,12 @@ const StyledConsole = styled.textarea`
     &:focus {
         outline: none;
     }
+    @media ${(props) => props.theme.media.phone} {
+        border-top: 1px solid red;
+    }
+    @media ${(props) => props.theme.media.tablet} {
+        border-top: 1px solid green;
+    }
 `;
 
 const Console = ({ color, ...props }) => {
