@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const Global = createGlobalStyle`
   * {
@@ -14,11 +14,18 @@ const Global = createGlobalStyle`
   }
 `;
 
+const theme = {
+    colors: {
+        primary: 'green',
+        secondary: 'red',
+    },
+};
+
 ReactDOM.render(
-    <>
+    <ThemeProvider theme={theme}>
         <Global />
         <App />
-    </>,
+    </ThemeProvider>,
 
     document.getElementById('root')
 );
