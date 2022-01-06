@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Flex from './components/Flex';
 import Title from './components/Title';
 
 const AppWrapper = styled.div`
@@ -11,7 +12,9 @@ const AppWrapper = styled.div`
 function App() {
     return (
         <AppWrapper>
-            <Title color={'red'}>aesaSSGudgiEW893X</Title>
+            <Flex justify='center'>
+                <Title color={'green'}>Test</Title>
+            </Flex>
         </AppWrapper>
     );
 }
