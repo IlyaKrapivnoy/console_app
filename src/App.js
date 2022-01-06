@@ -11,7 +11,7 @@ const AppWrapper = styled.div`
 function App() {
     return (
         <AppWrapper>
-            <Title>aesaSSGudgiEW893X</Title>
+            <Title color={'red'}>aesaSSGudgiEW893X</Title>
         </AppWrapper>
     );
 }
