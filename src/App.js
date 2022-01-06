@@ -17,8 +17,10 @@ function App() {
             <Flex justify='center'>
                 <Title color={'green'}>Test</Title>
             </Flex>
-            <Console />
-            <Button>Send</Button>
+            <Flex direction='column'>
+                <Console />
+                <Button align='flex-end'>Send Request</Button>
+            </Flex>
         </AppWrapper>
     );
 }

@@ -6,6 +6,7 @@ const StyledButton = styled.button`
     padding: 18px 15px;
     font-size: 18px;
     cursor: pointer;
+    align-self: ${(props) => props.align || 'stretch'};
     &:focus {
         outline: none;
     }
