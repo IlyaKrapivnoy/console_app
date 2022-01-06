@@ -17,8 +17,8 @@ function App() {
             <Flex justify='center'>
                 <Title color={'green'}>Test</Title>
             </Flex>
-            <Flex direction='column'>
-                <Console />
+            <Flex direction='column' margin={'10px 0'}>
+                <Console color={'green'} />
                 <Button color={'green'} align='flex-end'>
                     Send Request
                 </Button>

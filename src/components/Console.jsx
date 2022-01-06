@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import Flex from './Flex';
+import Line from './Line';
 
 const StyledConsole = styled.textarea`
     width: 100%;
@@ -14,8 +16,18 @@ const StyledConsole = styled.textarea`
     }
 `;
 
-const Console = (props) => {
-    return <StyledConsole {...props} />;
+const Console = ({ color, ...props }) => {
+    const [lines, setLines] = useState(['C/users/ILYA_K>']);
+    return (
+        <Flex>
+            <Flex direction={'column'} margin='0 10px'>
+                {lines.map((line) => (
+                    <Line color={color}>{line}</Line>
+                ))}
+            </Flex>
+            <StyledConsole color={color} {...props} />
+        </Flex>
+    );
 };
 
 export default Console;
