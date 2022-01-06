@@ -19,7 +19,9 @@ function App() {
             </Flex>
             <Flex direction='column'>
                 <Console />
-                <Button align='flex-end'>Send Request</Button>
+                <Button outlined color={'green'} align='flex-end'>
+                    Send Request
+                </Button>
             </Flex>
         </AppWrapper>
     );

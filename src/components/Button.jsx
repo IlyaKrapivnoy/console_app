@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const StyledButton = styled.button`
     border: none;
@@ -7,6 +7,20 @@ const StyledButton = styled.button`
     font-size: 18px;
     cursor: pointer;
     align-self: ${(props) => props.align || 'stretch'};
+    ${(props) =>
+        props.primary &&
+        css`
+            color: ${(props) => props.color || 'white'};
+            background: ${(props) => props.background || 'white'};
+        `}
+    ${(props) =>
+        props.outlined &&
+        css`
+            color: ${(props) => props.color || 'white'};
+            border: 1px solid ${(props) => props.color || 'white'};
+            background: transparent;
+        `}
+
     &:focus {
         outline: none;
     }
