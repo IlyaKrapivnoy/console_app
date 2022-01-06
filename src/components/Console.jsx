@@ -18,6 +18,13 @@ const StyledConsole = styled.textarea`
 
 const Console = ({ color, ...props }) => {
     const [lines, setLines] = useState(['C/users/ILYA_K>']);
+
+    const onKeyPress = (e) => {
+        if (e.charCode == 13) {
+            setLines([...lines, 'C/users/ILYA_K>']);
+        }
+    };
+
     return (
         <Flex>
             <Flex direction={'column'} margin='0 10px'>
@@ -25,7 +32,7 @@ const Console = ({ color, ...props }) => {
                     <Line color={color}>{line}</Line>
                 ))}
             </Flex>
-            <StyledConsole color={color} {...props} />
+            <StyledConsole onKeyPress={onKeyPress} color={color} {...props} />
         </Flex>
     );
 };
